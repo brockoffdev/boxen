@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["jbarnette@github.com", "wfarr@github.com", "dgoodlad@github.com", "bryant.rockoff@refinery29.com"]
   gem.description   = "Manage Mac development boxes with love (and Puppet)."
   gem.summary       = "You know, for laptops and stuff."
-  gem.homepage      = "https://github.com/boxen/boxen"
+  gem.homepage      = "https://github.com/brockoffdev/boxen"
 
   gem.files         = `git ls-files`.split $/
   gem.test_files    = gem.files.grep /^test/
