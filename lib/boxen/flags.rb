@@ -43,6 +43,8 @@ module Boxen
       @restart_services = false
       @list_services    = false
       @color            = true
+      @vim              = true
+      @bash             = true
 
       @options = OptionParser.new do |o|
         o.banner = "Usage: #{File.basename $0} [options] [projects...]\n\n"
@@ -113,6 +115,14 @@ module Boxen
 
         o.on "--no-fde", "Don't require full disk encryption." do
           @fde = false
+        end
+        
+        o.on "--no-bash", "Don't install R29 bash-it on run." do
+          @bash = false
+        end
+        
+        o.on "--no-vim", "Don't install SPF-13 vim on run." do
+          @vim = false
         end
 
         # --no-pull is used before options are parsed, but consumed here.
