@@ -45,6 +45,7 @@ module Boxen
       @color            = true
       @vim              = true
       @bash             = true
+      @osx              = true
 
       @options = OptionParser.new do |o|
         o.banner = "Usage: #{File.basename $0} [options] [projects...]\n\n"
@@ -123,6 +124,10 @@ module Boxen
         
         o.on "--no-vim", "Don't install SPF-13 vim on run." do
           @vim = false
+        end
+        
+        o.on "--no-osx", "Don't run any OSX Configurations." do
+          @osx = false
         end
 
         # --no-pull is used before options are parsed, but consumed here.
